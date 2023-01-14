@@ -4,8 +4,8 @@ const API = "https://rickandmortyapi.com/api";
 
 
 
-function runApp(){
-    fetch(`${API}/character/`)
+async function runApp (){
+    await fetch(`${API}/character/`)
     .then(response => response.json())
     .then(characters => {
             for(character of characters.results){
